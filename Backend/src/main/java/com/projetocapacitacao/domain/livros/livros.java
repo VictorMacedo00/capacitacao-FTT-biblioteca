@@ -39,5 +39,5 @@ public class livros implements Serializable {
     @Size(max = 120)
     @Column(name = "isbn")
     private String isbn;
-
+    
 }
