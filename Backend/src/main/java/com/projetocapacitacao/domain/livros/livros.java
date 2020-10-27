@@ -6,6 +6,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -39,5 +40,12 @@ public class livros implements Serializable {
     @Size(max = 120)
     @Column(name = "isbn")
     private String isbn;
-    
+
+    @NotNull
+    @JoinColumn(name = "categorias_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private com.projetocapacitacao.domain.categorias.categorias categorias;
+
+    public livros() {
+    }
 }

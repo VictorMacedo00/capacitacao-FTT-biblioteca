@@ -1,11 +1,10 @@
-package com.projetocapacitacao.domain.livros;
+package com.projetocapacitacao.domain.categorias;
 
 import com.projetocapacitacao.core.Controller.AbstractController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/livros")
-public class livrosControler extends AbstractController<livros> {
-
+@RequestMapping("/categorias")
+public class categoriasController extends AbstractController<categorias> {
 }
