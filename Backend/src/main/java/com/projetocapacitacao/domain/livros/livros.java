@@ -46,6 +46,11 @@ public class livros implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     private com.projetocapacitacao.domain.categorias.categorias categorias;
 
+    @NotNull
+    @JoinColumn(name = "estantes_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private com.projetocapacitacao.domain.estantes.estantes estantes;
+
     public livros() {
     }
 }
